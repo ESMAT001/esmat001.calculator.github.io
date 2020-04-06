@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>CALCULATOR</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand font-weight-bold" href="index.html"><img class="logo" src="logo.png" alt="logo"></a>
+            <button class="navbar-toggler border-0 text-white " data-toggle="collapse" data-target="#navbar">
+              <span class="navbar-toggler-icon  "></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-3 "><a class="nav-link text-white btn btn-primary border-0  font-weight-bold" href="index.html">Home</a></li>
+                    <li class="nav-item px-3"><a class="nav-link text-white btn btn-primary border-0 font-weight-bold" href="Calculator.html">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link text-white btn btn-primary border-0 font-weight-bold " href="About-us.html">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <div class="container-fluid">
+                <div class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="link" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active"><a class="link" href="Calculator.html">Calculator</a></li>
+                </div>
+                <div class="jumbotron">
+                    <div class="w-100 mx-auto my-0 p-0">
+                        <div class="list-group row w-75 w-sm-100 flex-row  mx-auto" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active col-sm-6 text-center" id="list-converter-list" href="#converter" data-toggle="list">CONVERTER</a>
+                            <a class="list-group-item list-group-item-action col-sm-6 text-center" id="list-calculator-list" href="#calculator" data-toggle="list">CALCULATOR</a>
+                        </div>
+                    </div>
+                    <hr class="mb-5">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active converter" id="converter" role="tabpanel">
+                            <form class="row w-100 d-flex justify-content-center mx-auto">
+                                <!-- main col -->
+                                <div class="row col-sm-6 mx-auto">
+                                    <!-- input filed -->
+                                    <div class="col form-group">
+                                        <h6>From Decimal :</h4>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                        <input class="form-check-input radio" type="radio" name="radio" value="DTB" checked>
+                        To Binary
+                      </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                        <input class="form-check-input radio" type="radio" name="radio" value="DTO">
+                        To octal
+                      </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                        <input class="form-check-input radio" type="radio" name="radio" value="DTH">
+                        To Hexa
+                      </label>
+                                            </div>
+                                    </div>
+                                    <!-- /input  -->
+                                    <!-- input filed -->
+                                    <div class="col form-group">
+                                        <h6>From Binary :</h4>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                        <input class="form-check-input radio" type="radio" name="radio" value="BTD">
+                        To Decimal
+                      </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                        <input class="form-check-input radio" type="radio" name="radio" value="BTO">
+                        To octal
+                      </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                        <input class="form-check-input radio" type="radio" name="radio" value="BTH">
+                        To Hexa
+                      </label>
+                                            </div>
+                                    </div>
+                                    <!-- /input  -->
+                                </div>
+                                <!-- /main col -->
+                                <!-- main col -->
+                                <div class=" row col-sm-6 mx-auto">
+                                    <!-- input filed -->
+                                    <div class="col form-group">
+                                        <h6>From Octal :</h4>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                          <input class="form-check-input radio" type="radio" name="radio" value="OTD">
+                          To Decimal
+                        </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                          <input class="form-check-input radio" type="radio" name="radio" value="OTB">
+                          To Binary
+                        </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                          <input class="form-check-input radio" type="radio" name="radio" value="OTH">
+                          To Hexa
+                        </label>
+                                            </div>
+                                    </div>
+                                    <!-- /input  -->
+                                    <!-- input filed -->
+                                    <div class="col form-group">
+                                        <h6>From Hexa:</h4>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                          <input class="form-check-input radio" type="radio" name="radio" value="HTD">
+                          To Decimal
+                        </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                          <input class="form-check-input radio" type="radio" name="radio" value="HTO">
+                          To octal
+                        </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                          <input class="form-check-input radio" type="radio" name="radio" value="HTB">
+                          To Binary
+                        </label>
+                                            </div>
+                                    </div>
+                                    <!-- /input  -->
+                                </div>
+                                <!-- /main col -->
+                                <!-- text field -->
+                                <div class="row w-75 my-3">
+                                    <div class="col-sm-8 form-group">
+                                        <input id="textField" type="text" name="txt" placeholder="Enter the number here" class="form-control" value="">
+                                        <div class="invalid-feedback m-0 p-1" id="textInvalid">invalid input ,please enter correct number </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button class="btn btn-primary form-control disabled" id="convertBtn" type="button">Convert</button>
+                                    </div>
+                                </div>
+                                <!-- /text field -->
+                            </form>
+                            <div class="info my-5">
+                                <hr>
+                                <h4 class="h5 text-center text-uppercase">Instructions</h4>
+                                <hr>
+                                <!-- instruction drop down -->
+                                <div id="accordion" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion" data-toggle="collapse" href="#collapse">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Decimal to Binary
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion1" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion1" data-toggle="collapse" href="#collapse1">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Decimal to Octal
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse1" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion2" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion2" data-toggle="collapse" href="#collapse2">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Decimal to Hexadcimal
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse2" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion3" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion3" data-toggle="collapse" href="#collapse3">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Octal to Binary
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse3" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion4" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion4" data-toggle="collapse" href="#collapse4">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Octal to Decimal
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse4" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion5" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion5" data-toggle="collapse" href="#collapse5">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Octal to Hexadcimal
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse5" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                            </div>
+                        </div>
+                        <div class="tab-pane fade operation" id="calculator" role="tabpanel">
+                            <div class="calculate">
+
+                            </div>
+                            <div class="info my-5">
+                                <hr>
+                                <h4 class="h5 text-center text-uppercase">Instructions</h4>
+                                <hr>
+                                <!-- instruction drop down -->
+                                <div id="accordion" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion" data-toggle="collapse" href="#collapse">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Decimal to Binary
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion1" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion1" data-toggle="collapse" href="#collapse1">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Decimal to Octal
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse1" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion2" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion2" data-toggle="collapse" href="#collapse2">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Decimal to Hexadcimal
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse2" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion3" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion3" data-toggle="collapse" href="#collapse3">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Octal to Binary
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse3" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion4" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion4" data-toggle="collapse" href="#collapse4">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Octal to Decimal
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse4" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                                <div id="accordion5" role="tablist">
+                                    <div class="card">
+                                        <a class="text-white link" data-parent="#accordion5" data-toggle="collapse" href="#collapse5">
+                                            <div class="card-header bg-primary " role="tab" id="heading">
+                                                <h4 class="h6 mb-0 text-center">
+                                                    Octal to Hexadcimal
+                                                </h4>
+                                            </div>
+                                        </a>
+                                        <div id="collapse5" class="collapse">
+                                            <div class="card-body ">
+                                                <h5>Steps to Convert from Decimal to Binary</h5>
+                                                <hr>
+                                                <p class="info-p">If you don't have a calculator to hand, you can easily convert a decimal number to binary using the remainder method. This involves dividing the number by 2 recursively until you're left with 0, while taking
+                                                    note of each remainder.</p>
+                                                <p class="info-p">Write down the decimal number. Divide the number by 2. Write the result underneath. Write the remainder on the right hand side. This will be <strong>0</strong> or <strong>1</strong>. Divide the result of
+                                                    the division by 2 and again write down the remainder. Continue dividing and writing down remainders until the result of the division is 0. The most significant bit (MSB) is at the bottom of the column
+                                                    of remainders and the least significant bit (LSB) is at the top. Read the series of 1s and 0s on the right from the bottom up. This is the binary equivalent of the decimal number.</p>
+                                                <table class="table table-bordered mx-auto w-50">
+                                                    <thead class=" text-white bg-primary ">
+                                                        <tr>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">Decimal</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">Binary</p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">0</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">0</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">1</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">2</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">10</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">3</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">11</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">4</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">100</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">5</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">101</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">6</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">110</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">7</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">111</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">8</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1000</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">9</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1001</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center ">10</p>
+                                                            </td>
+                                                            <td class="p-1">
+                                                                <p class="info-p m-0 text-center">1010</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /instruction drop down -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-fluid bg-primary  justify-content-center d-flex">
+            <p class="text-light my-3 h-25">&copy; copyright 2020</p>
+        </div>
+    </footer>
+</body>
+<script src="app.js"></script>
+
+</html>
