@@ -168,61 +168,16 @@ function HexaToDecimal(num) {
 }
 //function validation true
 function validationTrue() {
-    var clasList = btn.classList;
-    var textClassList = text.classList;
-    console.log(clasList);
-    var newClasList = "";
-    var newClasList1 = "";
-    for (let i = 0; i < textClassList.length; i++) {
-        if (textClassList[i] === "is-invalid") {
-
-        } else {
-            newClasList1 += textClassList[i] + " ";
-        }
-    }
-    for (let i = 0; i < clasList.length; i++) {
-        if (clasList[i] === "disabled") {
-
-        } else {
-            newClasList += clasList[i] + " ";
-        }
-    }
+    text.classList.remove("is-invalid");
+    btn.classList.remove("disabled");
     btn.removeAttribute("disabled");
-    btn.className = newClasList;
-    text.className = newClasList1;
     textInvalid.style.display = "none";
 }
 //function validation false
 function validationFalse() {
     textInvalid.style.display = "block";
-    var count1 = 0;
-    var count2 = 0;
-    var textClassList = text.classList;
-    var clasList = btn.classList;
-    for (let i = 0; i < textClassList.length; i++) {
-        if (textClassList[i] === "is-invalid") {
-
-        } else {
-            count2 = 1;
-        }
-    }
-    for (let i = 0; i < clasList.length; i++) {
-        if (clasList[i] === "disabled") {
-
-        } else {
-            count1 = 1;
-        }
-    }
-    if (count1 = 0) {
-
-    } else {
-        btn.className += " disabled";
-    }
-    if (count2 = 0) {
-
-    } else {
-        text.className += " is-invalid";
-    }
+    text.classList.add("is-invalid");
+    btn.classList.add("disabled");
     btn.setAttribute("disabled", "disabled");
 }
 
@@ -389,20 +344,7 @@ text.addEventListener("keyup", function() {
                 break;
         }
     } else {
-        var count1 = 0;
-        var clasList = btn.classList;
-        for (let i = 0; i < clasList.length; i++) {
-            if (clasList[i] === "disabled") {
-
-            } else {
-                count1 = 1;
-            }
-        }
-        if (count1 = 0) {
-
-        } else {
-            btn.className += " disabled";
-        }
+        btn.classList.add("disabled");
         btn.setAttribute("disabled", "disabled");
     }
 })
