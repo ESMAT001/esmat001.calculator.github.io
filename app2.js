@@ -29,191 +29,20 @@ for (let i = 0; i < radioBtn2.length; i++) {
 }
 //function validation true
 function validationTrueCal() {
-    var clasList = btnCal.classList;
-    console.log(clasList);
-    var newClasList = "";
-    var newClasList1 = "";
-    for (let i = 0; i < clasList.length; i++) {
-        if (clasList[i] === "disabled") {
-
-        } else {
-            newClasList += clasList[i] + " ";
-        }
-    }
+    btnCal.classList.remove("disabled")
     btnCal.removeAttribute("disabled");
-    btn.className = newClasList;
 }
 //function validation false
 function validationFalseCal() {
-    var count1 = 0;
-    var clasList = btnCal.classList;
-    for (let i = 0; i < clasList.length; i++) {
-        if (clasList[i] === "disabled") {
-
-        } else {
-            count1 = 1;
-        }
-    }
-    if (count1 = 0) {
-
-    } else {
-        btn.className += " disabled";
-    }
+    btnCal.classList.add("disabled");
     btnCal.setAttribute("disabled", "disabled");
 }
 textFieldNumber.addEventListener("keyup", function() {
-    switch (numberType1) {
-        case "Decimal":
-            if (DecimalValidation(textFieldNumber.value)) {
-                var classLs = textFieldNumber.classList;
-                var newClassLs = "";
-                for (let i = 0; i < classLs.length; i++) {
-                    if (classLs[i] == "is-invalid") {
+    validationAll(numberType1, textFieldNumber);
+});
 
-                    } else {
-                        newClassLs += classLs[i] + " ";
-                    }
-                }
-                textFieldNumber.className = newClassLs;
-                validationTrueCal();
-            } else {
-                textFieldNumber.className += " is-invalid"
-                validationFalseCal();
-            }
-            break;
-        case "Octal":
-            if (OctalValidation(textFieldNumber.value)) {
-                var classLs = textFieldNumber.classList;
-                var newClassLs = "";
-                for (let i = 0; i < classLs.length; i++) {
-                    if (classLs[i] == "is-invalid") {
-
-                    } else {
-                        newClassLs += classLs[i] + " ";
-                    }
-                }
-                textFieldNumber.className = newClassLs;
-                validationTrueCal();
-            } else {
-                textFieldNumber.className += " is-invalid"
-                validationFalseCal();
-            }
-            break;
-        case "Binary":
-            if (BinaryValidation(textFieldNumber.value)) {
-                var classLs = textFieldNumber.classList;
-                var newClassLs = "";
-                for (let i = 0; i < classLs.length; i++) {
-                    if (classLs[i] == "is-invalid") {
-
-                    } else {
-                        newClassLs += classLs[i] + " ";
-                    }
-                }
-                textFieldNumber.className = newClassLs;
-                validationTrueCal();
-            } else {
-                textFieldNumber.className += " is-invalid"
-                validationFalseCal();
-            }
-            break;
-        case "Hexa":
-            if (HexaValidation(textFieldNumber.value)) {
-                var classLs = textFieldNumber.classList;
-                var newClassLs = "";
-                for (let i = 0; i < classLs.length; i++) {
-                    if (classLs[i] == "is-invalid") {
-
-                    } else {
-                        newClassLs += classLs[i] + " ";
-                    }
-                }
-                textFieldNumber.className = newClassLs;
-                validationTrueCal();
-            } else {
-                textFieldNumber.className += " is-invalid"
-                validationFalseCal();
-            }
-            break;
-
-    }
-})
 textFieldNumber1.addEventListener("keyup", function() {
-    switch (numberType2) {
-        case "Decimal":
-            if (DecimalValidation(textFieldNumber1.value)) {
-                var classLs = textFieldNumber1.classList;
-                var newClassLs = "";
-                for (let i = 0; i < classLs.length; i++) {
-                    if (classLs[i] == "is-invalid") {
-
-                    } else {
-                        newClassLs += classLs[i] + " ";
-                    }
-                }
-                textFieldNumber1.className = newClassLs;
-                validationTrueCal();
-            } else {
-                textFieldNumber1.className += " is-invalid";
-                validationFalseCal();
-            }
-            break;
-        case "Octal":
-            if (OctalValidation(textFieldNumber1.value)) {
-                var classLs = textFieldNumber1.classList;
-                var newClassLs = "";
-                for (let i = 0; i < classLs.length; i++) {
-                    if (classLs[i] == "is-invalid") {
-
-                    } else {
-                        newClassLs += classLs[i] + " ";
-                    }
-                }
-                textFieldNumber1.className = newClassLs;
-                validationTrueCal();
-            } else {
-                textFieldNumber1.className += " is-invalid";
-                validationFalseCal();
-            }
-            break;
-        case "Binary":
-            if (BinaryValidation(textFieldNumber1.value)) {
-                var classLs = textFieldNumber1.classList;
-                var newClassLs = "";
-                for (let i = 0; i < classLs.length; i++) {
-                    if (classLs[i] == "is-invalid") {
-
-                    } else {
-                        newClassLs += classLs[i] + " ";
-                    }
-                }
-                textFieldNumber1.className = newClassLs;
-                validationTrueCal();
-            } else {
-                textFieldNumber1.className += " is-invalid";
-                validationFalseCal();
-            }
-            break;
-        case "Hexa":
-            if (HexaValidation(textFieldNumber1.value)) {
-                var classLs = textFieldNumber1.classList;
-                var newClassLs = "";
-                for (let i = 0; i < classLs.length; i++) {
-                    if (classLs[i] == "is-invalid") {
-
-                    } else {
-                        newClassLs += classLs[i] + " ";
-                    }
-                }
-                textFieldNumber1.className = newClassLs;
-                validationTrueCal();
-            } else {
-                textFieldNumber1.className += " is-invalid"
-                validationFalseCal();
-            }
-            break;
-
-    }
+    validationAll(numberType2, textFieldNumber1);
 })
 
 function calculate() {
@@ -283,25 +112,72 @@ function calculate() {
     console.log(result);
     textResult.value = result;
 }
-// Calculate
-btnCal.addEventListener("click", function() {
-    var count = 0;
-    var count1 = 0;
-    var clas1 = textFieldNumber.classList;
-    var clas2 = textFieldNumber1.classList;
-    for (let i = 0; i < clas1.length; i++) {
-        if (clas1[i] == "is-invalid") {
-            count = 1;
-        }
-    }
-    for (let i = 0; i < clas2.length; i++) {
-        if (clas2[i] == "is-invalid") {
-            count1 = 1;
-        }
-    }
-    if (count == 0 && count1 == 0) {
-        calculate();
-    } else {
+//valdation 
+function validationAll(a, b) {
+    switch (a) {
+        case "Decimal":
+            if (DecimalValidation(b.value)) {
+                b.classList.remove("is-invalid");
+                validationTrueCal();
+            } else {
+                b.classList.add("is-invalid");
+                validationFalseCal();
+            }
+            break;
+        case "Octal":
+            if (OctalValidation(b.value)) {
+                b.classList.remove("is-invalid");
+                validationTrueCal();
+            } else {
+                b.classList.add("is-invalid");
+                validationFalseCal();
+            }
+            break;
+        case "Binary":
+            if (BinaryValidation(b.value)) {
+                b.classList.remove("is-invalid");
+                validationTrueCal();
+            } else {
+                b.classList.add("is-invalid");
+                validationFalseCal();
+            }
+            break;
+        case "Hexa":
+            if (HexaValidation(b.value)) {
+                b.classList.remove("is-invalid");
+                validationTrueCal();
+            } else {
+                b.classList.add("is-invalid");
+                validationFalseCal();
+            }
+            break;
 
     }
+}
+// Calculate
+btnCal.addEventListener("click", function() {
+    if (textFieldNumber.value != "" && textFieldNumber1.value != "") {
+        var count = 0;
+        var count1 = 0;
+        var clas1 = textFieldNumber.classList;
+        var clas2 = textFieldNumber1.classList;
+        for (let i = 0; i < clas1.length; i++) {
+            if (clas1[i] == "is-invalid") {
+                count = 1;
+            }
+        }
+        for (let i = 0; i < clas2.length; i++) {
+            if (clas2[i] == "is-invalid") {
+                count1 = 1;
+            }
+        }
+        if (count == 0 && count1 == 0) {
+            calculate();
+        } else {
+
+        }
+    } else {
+        console.log("invalid")
+    }
+
 })
